@@ -4,7 +4,8 @@ var Hapi = require('hapi');
 var plugin = require('test_private_hapi_plugin');
 
 var server = new Hapi.Server();
-server.connection({ port: 3000 });
+var port = process.env.PORT || 3000
+server.connection({ port: port });
 
 server.route({
     method: 'GET',
