@@ -14,5 +14,9 @@
   "license": "MIT",
   "dependencies": {
     "test_private_library": "git+ssh://git@bitbucket.org:joshuaball/test_private_library.git"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-bump": "0.0.17"
   }
 }
