@@ -1,6 +1,6 @@
 {
   "name": "test_private_hapi_plugin",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -13,7 +13,7 @@
   "author": "Joshua Ball <joshua.g.s.ball@gmail.com> (https://github.com/joshball/)",
   "license": "MIT",
   "dependencies": {
-    "test_private_library": "git+ssh://git@bitbucket.org:joshuaball/test_private_library.git"
+    "test_private_library": "git+ssh://git@bitbucket.org:joshuaball/fubar.library.git"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
