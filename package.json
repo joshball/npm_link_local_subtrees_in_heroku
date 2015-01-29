@@ -4,7 +4,9 @@
   "description": "An example node project that uses git subtrees for private modules and attempts to link or install locally these modules in heroku.",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "npm link local_subtree_modules/test_private_hapi_plugin && npm link local_subtree_modules/test_private_library",
+    "preupdate": "npm link local_subtree_modules/test_private_hapi_plugin && npm link local_subtree_modules/test_private_library"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,6 @@
   "homepage": "https://github.com/joshball/npm_link_local_subtrees_in_heroku",
   "dependencies": {
     "hapi": "^8.1.0",
-    "test_private_hapi_plugin": "git+ssh://git@bitbucket.org:joshuaball/test_private_hapi_plugin.git"
+    "test_private_hapi_plugin": "git+ssh://git@bitbucket.org:joshuaball/fubar.plugin.git"
   }
 }

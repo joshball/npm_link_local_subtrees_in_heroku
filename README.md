@@ -102,4 +102,4 @@ The we also fail, but a bit differently:
      * branch            master     -> FETCH_HEAD
     Added dir 'local_subtree_modules/test_private_library'
 
-## Third, lets modify the package.json to fetch locally.
+## Third, lets modify the package.json to npm link.
