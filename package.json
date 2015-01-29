@@ -5,10 +5,8 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "a": "npm link local_subtree_modules/test_private_hapi_plugin && npm link local_subtree_modules/test_private_library",
-    "b": "npm link local_subtree_modules/test_private_hapi_plugin && npm link local_subtree_modules/test_private_library",
-    "preinstall": "cd local_subtree_modules/test_private_hapi_plugin && npm link && cd ../.. && npm link test_private_hapi_plugin && cd local_subtree_modules/test_private_library && npm link && cd ../.. && npm link test_private_library",
-    "preupdate": "cd local_subtree_modules/test_private_hapi_plugin && npm link && cd ../.. && npm link test_private_hapi_plugin && cd local_subtree_modules/test_private_library && npm link && cd ../.. && npm link test_private_library"
+    "preinstall": "npm link local_subtree_modules/test_private_hapi_plugin && npm link local_subtree_modules/test_private_library",
+    "preupdate": "npm link local_subtree_modules/test_private_hapi_plugin && npm link local_subtree_modules/test_private_library"
   },
   "repository": {
     "type": "git",
