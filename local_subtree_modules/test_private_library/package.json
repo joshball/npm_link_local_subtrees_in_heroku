@@ -1,0 +1,19 @@
+{
+  "name": "test_private_library",
+  "version": "2.2.1",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@bitbucket.org/joshuaball/test_private_library.git"
+  },
+  "author": "Joshua Ball <joshua.g.s.ball@gmail.com> (https://github.com/joshball/)",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-bump": "0.0.17"
+  }
+}
