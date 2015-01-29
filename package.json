@@ -11,5 +11,8 @@
     "url": "ssh://git@bitbucket.org/joshuaball/test_private_hapi_plugin.git"
   },
   "author": "Joshua Ball <joshua.g.s.ball@gmail.com> (https://github.com/joshball/)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "test_private_library": "git+ssh://git@bitbucket.org:joshuaball/test_private_library.git"
+  }
 }
