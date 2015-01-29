@@ -84,3 +84,8 @@ The we also fail, but a bit differently:
     npm ERR! git clone git://git@bitbucket.org/joshuaball/test_private_library.git fatal: Unable to look up git@bitbucket.org (port 9418) (A non-recoverable error occurred during a database lookup. )
 
 # Now lets add some subtrees:
+
+## First add the repos as remotes (convenience):
+    git remote add -f test_private_hapi_plugin  ssh://git@bitbucket.org/joshuaball/test_private_hapi_plugin.git
+    git remote add -f test_private_library      ssh://git@bitbucket.org/joshuaball/test_private_library.git
+
