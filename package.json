@@ -11,5 +11,9 @@
     "url": "ssh://git@bitbucket.org/joshuaball/test_private_library.git"
   },
   "author": "Joshua Ball <joshua.g.s.ball@gmail.com> (https://github.com/joshball/)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-bump": "0.0.17"
+  }
 }
