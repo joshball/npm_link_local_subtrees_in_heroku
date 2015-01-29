@@ -89,3 +89,17 @@ The we also fail, but a bit differently:
     git remote add -f test_private_hapi_plugin  ssh://git@bitbucket.org/joshuaball/test_private_hapi_plugin.git
     git remote add -f test_private_library      ssh://git@bitbucket.org/joshuaball/test_private_library.git
 
+## Second, add the subtrees:
+
+    > git subtree add --prefix=local_subtree_modules/test_private_hapi_plugin     test_private_hapi_plugin    master --squash
+    git fetch test_private_hapi_plugin master
+    From ssh://bitbucket.org/joshuaball/test_private_hapi_plugin
+     * branch            master     -> FETCH_HEAD
+    Added dir 'local_subtree_modules/test_private_hapi_plugin'
+
+    > git subtree add --prefix=local_subtree_modules/test_private_library         test_private_library        master --squash
+    From ssh://bitbucket.org/joshuaball/test_private_library
+     * branch            master     -> FETCH_HEAD
+    Added dir 'local_subtree_modules/test_private_library'
+
+## Third, lets modify the package.json to fetch locally.
