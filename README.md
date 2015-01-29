@@ -103,3 +103,69 @@ The we also fail, but a bit differently:
     Added dir 'local_subtree_modules/test_private_library'
 
 ## Third, lets modify the package.json to fetch locally.
+The root package.json now has:
+    "test_private_library": "file:local_subtree_modules/test_private_library",
+    "test_private_hapi_plugin": "file:local_subtree_modules/test_private_hapi_plugin"
+
+    > npm install
+    test_private_library@2.2.1 node_modules\test_private_library
+
+    test_private_hapi_plugin@1.0.4 node_modules\test_private_hapi_plugin
+    └── test_private_library@2.2.1
+
+So, everything is installed, but if you run:
+
+    > npm shrinkwrap
+
+
+You will see your npm-shrinkwrap.json has split dependencies:
+
+      "dependencies": {
+        "test_private_hapi_plugin": {
+          "version": "1.0.4",
+          "from": "local_subtree_modules\\test_private_hapi_plugin",
+          "resolved": "file:local_subtree_modules\\test_private_hapi_plugin",
+          "dependencies": {
+            "test_private_library": {
+              "version": "2.2.1",
+              "from": "C:\\Users\\Joshua\\AppData\\Local\\Temp\\npm-1948-3a48ebda\\git-cache-6f085d99b7ff\\e4c31873bf59c8b7e2513f74c6549daba7380daa",
+              "resolved": "git+ssh://git@bitbucket.org:joshuaball/test_private_library.git#e4c31873bf59c8b7e2513f74c6549daba7380daa"
+            }
+          }
+        },
+        "test_private_library": {
+          "version": "2.2.1",
+          "from": "local_subtree_modules\\test_private_library",
+          "resolved": "file:local_subtree_modules\\test_private_library"
+        }
+      }
+
+So if we change the shrinkwrap (simulating a private repo)
+
+    "dependencies": {
+        "test_private_library": {
+          "resolved": "git://git@bitbucket.org:joshuaball/test_private_library.git#e4c31873bf59c8b7e2513f74c6549daba7380daa"
+        }
+    }
+
+And try an install, it will fail (as above):
+
+But we can use local:
+
+  "dependencies": {
+    "test_private_hapi_plugin": {
+      "version": "1.0.4",
+      "from": "local_subtree_modules\\test_private_hapi_plugin",
+      "resolved": "file:local_subtree_modules\\test_private_hapi_plugin",
+      "dependencies": {
+        "test_private_library": {
+          "version": "2.2.1",
+          "from": "..\\..\\local_subtree_modules\\test_private_hapi_plugin",
+          "resolved": "file:..\\..\\local_subtree_modules\\test_private_hapi_plugin"
+        }
+      }
+    },
+
+
+But that is weird, because now we are locked into a 'version' from the package. :-(
+

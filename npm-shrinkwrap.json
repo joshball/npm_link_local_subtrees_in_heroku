@@ -1,0 +1,23 @@
+{
+  "name": "npm_link_local_subtrees_in_heroku",
+  "version": "1.0.0",
+  "dependencies": {
+    "test_private_hapi_plugin": {
+      "version": "1.0.4",
+      "from": "local_subtree_modules\\test_private_hapi_plugin",
+      "resolved": "file:local_subtree_modules\\test_private_hapi_plugin",
+      "dependencies": {
+        "test_private_library": {
+          "version": "2.2.1",
+          "from": "..\\..\\local_subtree_modules\\test_private_hapi_plugin",
+          "resolved": "file:..\\..\\local_subtree_modules\\test_private_hapi_plugin"
+        }
+      }
+    },
+    "test_private_library": {
+      "version": "2.2.1",
+      "from": "local_subtree_modules\\test_private_library",
+      "resolved": "file:local_subtree_modules\\test_private_library"
+    }
+  }
+}
