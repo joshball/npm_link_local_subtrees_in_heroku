@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "An example node project that uses git subtrees for private modules and attempts to link or install locally these modules in heroku.",
   "main": "main.js",
+  "engines": {
+    "node": "0.10.3",
+    "npm": "2.3.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "preinstall": "npm link local_subtree_modules/test_private_hapi_plugin && npm link local_subtree_modules/test_private_library",
