@@ -103,3 +103,22 @@ The we also fail, but a bit differently:
     Added dir 'local_subtree_modules/test_private_library'
 
 ## Third, lets modify the package.json to npm link.
+
+
+
+W:\src\github\joshball\npm_link_local_subtrees_in_heroku>git subtree pull --prefix=local_subtree_modules/test_private_hapi_plugin    test_private_hapi_plugin    master --squash
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 6 (delta 4), reused 0 (delta 0)
+Unpacking objects: 100% (6/6), done.
+From ssh://bitbucket.org/joshuaball/test_private_hapi_plugin
+ * branch            master     -> FETCH_HEAD
+   024d118..bfaad08  master     -> test_private_hapi_plugin/master
+Merge made by the 'recursive' strategy.
+ local_subtree_modules/test_private_hapi_plugin/package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+W:\src\github\joshball\npm_link_local_subtrees_in_heroku>git subtree pull --prefix=local_subtree_modules/test_private_library        test_private_library        master --squash
+From ssh://bitbucket.org/joshuaball/test_private_library
+ * branch            master     -> FETCH_HEAD
+Subtree is already at commit e4c31873bf59c8b7e2513f74c6549daba7380daa.
