@@ -18,6 +18,6 @@
   "homepage": "https://github.com/joshball/npm_link_local_subtrees_in_heroku",
   "dependencies": {
     "hapi": "^8.1.0",
-    "test_private_hapi_plugin": "git+ssh://git@bitbucket.org:joshuaball/test_private_hapi_plugin.git"
+    "test_private_hapi_plugin": "*"
   }
 }
